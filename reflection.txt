@@ -1,0 +1,30 @@
+Pong!
+Started: 30/07/2024.
+Completed: 01/08/2024.
+
+Project Overview: The task of Pong is to recreate a 2D version of Ping Pong. Both the CPU and the player have a paddle and there is a ball which spawns from the middle of the screen that can go in either direction. The goal of the game is to hit the wall behind the opponents paddle. If the ball hits the paddle it collides and then sends it in the opposite direction.
+
+Tutorial Source: https://www.youtube.com/watch?v=VLJlTaFvHo4&pp=ygUPcG9uZyBjKysgcmF5bGli
+
+Learning Goals: From this project I want to learn how to apply raylib to future projects and implementing CPU algorithms.
+
+Process:
+Before starting the project I had to install raylib and it was quite confusing to me even with the aid of tutorials, however I came across a tutorial that showed me a library manager called vcpkg.
+
+Game logic: Player & CPU has a paddle, ball spawns in middle of screen going in a random direction towards the opposing paddle. Each paddle needed its own collision so by creating a collision for the player paddle using a class and then inheriting that class to the CPU it saved duplicate code. The CPU tracks the ball by checking the position of the centre of the ball compared to the centre of the paddle and then follows the direction of the centre of the ball. The ball would collide with the top and bottom of the screen but if it hit either the left or the right side it would phase right through and then be spawned back in the middle. There are issue with the first spawned ball colliding with the players paddle where it clips however the rest are fine. I kept the background black, the paddles and ball white however I added a toggleable FPS counter in the top left of the screen (0,0). If a player scores their score tab goes up by one and if the CPU scores the same applies to it.
+
+Testing and debugging: The biggest issue I had was trying to map the paddles to the correct position on the screen, the window would also start non-centred so I set up a function to centre the window before the game starts.
+
+Challenges: I still find it very hard to understand the maths and the positioning of the objects.
+
+Skills Acquired: I learnt how to implement basic shapes with raylib and to draw objects on the screen. I also learnt how to make an executable window to pop up.
+
+Success: The project went fine aside from the odd starting collision issue with the player paddle and the ball however I'm most proud of the toggleable FPS counter. 
+
+Areas for Improvement: Maths, Object Oriented Programming.
+
+Future Applications: I can use everything I learned such as collision detection, drawing objects, inheriting data to future projects for everything.
+
+Overall Experience: The project was quite enjoyable and challenging however seeing the progress develop and being able to have a functioning game was definitely the icing on the top.
+
+Next Steps: I'm hoping if I ever come back to this project to add aesthetics to the entire interface of the game, to add a menu before the game starts to play either against a CPU or local two player. And to fix the object collision bug with the player paddle on the spawning ball. And to add sounds to the game.
